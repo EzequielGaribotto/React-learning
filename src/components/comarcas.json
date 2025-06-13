@@ -1,0 +1,7 @@
+[
+  { "nombre": "La Ribera", "provincia": "Valencia", "habitantes": 320000 },
+  { "nombre": "La Safor", "provincia": "Valencia", "habitantes": 210000 },
+  { "nombre": "L'Horta", "provincia": "Valencia", "habitantes": 600000 },
+  { "nombre": "El Camp de Túria", "provincia": "Valencia", "habitantes": 130000 },
+  { "nombre": "La Marina Alta", "provincia": "Alicante", "habitantes": 180000 }
+]
