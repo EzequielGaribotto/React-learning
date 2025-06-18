@@ -18,6 +18,9 @@ import Edificios from './objects/edificios.jsx';
 import MasMenos from './useState/MasMenos.jsx';
 import BolasInteractivas from './useState/bolasInteractivas.jsx';
 import Paginacion from './useState/Paginacion.jsx';
+import Tricolor from './useStateAdv/Tricolor.jsx';
+import Thumbs from './useStateAdv/Thumbs.jsx';
+import Fotos from './useStateAdv/Fotos.jsx';
 
 function MainContent(props) {
     const style = {
@@ -29,10 +32,9 @@ function MainContent(props) {
     }
 
     const elements = [
-        <Paginacion key="paginacion" min={1} max={15} />,
-        <BolasInteractivas key="bolasInteractivas" />,
-        <MasMenos key="masMenos" />
-    ];
+        <Fotos />
+
+        ];
 
     const content = [];
     for (let i = 0; i < elements.length; i++) {
