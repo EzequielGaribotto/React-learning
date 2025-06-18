@@ -15,6 +15,9 @@ import BolaBingo from './objects/bolaBingo.jsx';
 import FotoBolaX from './objects/fotoBolaX.jsx';
 import Marco from './objects/marco.jsx';
 import Edificios from './objects/edificios.jsx';
+import MasMenos from './useState/MasMenos.jsx';
+import BolasInteractivas from './useState/bolasInteractivas.jsx';
+import Paginacion from './useState/Paginacion.jsx';
 
 function MainContent(props) {
     const style = {
@@ -26,18 +29,9 @@ function MainContent(props) {
     }
 
     const elements = [
-        <HolaMundo key="hola" texto="¡Hola, Mundo!" />,
-        <Bola key="bola" />,
-        <Cuadrado key="cuadrado" />,
-        <CuadradoBorde key="cuadradoBorde" />,
-        <Mosca key="mosca" />,
-        <Capital key="capital" />,
-        <Gato key="gato" />,
-        <FotoBola key="fotoBola" />,
-        <BolaBingo key="bolaBingo" />,
-        <FotoBolaX key="fotoBolaX" />,
-        <Marco key="marco" src="https://loremflickr.com/" borde="2px" color="black" fondo="#eee" />,
-        <Edificios key="edificios" edificios={edificios} />
+        <Paginacion key="paginacion" min={1} max={15} />,
+        <BolasInteractivas key="bolasInteractivas" />,
+        <MasMenos key="masMenos" />
     ];
 
     const content = [];

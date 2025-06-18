@@ -2,6 +2,7 @@ import { useState } from 'react'
 import MainContent from './components/mainContent.jsx'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
 function App() {
