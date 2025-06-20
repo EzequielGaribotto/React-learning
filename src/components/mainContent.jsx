@@ -1,26 +1,5 @@
-import HolaMundo from './objects/holaMundo.jsx';
-import Bola from './objects/bola.jsx';
-import Cuadrado from './objects/cuadrado.jsx';
 import Separador from './objects/separador.jsx';
-import CuadradoBorde from './objects/cuadradoBorde.jsx';
-import Mosca from './objects/mosca.jsx';
-import Capital from './objects/capital.jsx';
-import Gato from './objects/gato.jsx';
-import FotoBola from './objects/fotoBola.jsx';
-import Tabla from './objects/tabla.jsx';
-import TablaDos from './objects/tablaDos.jsx';
-import comarcas from './comarcas.json';
-import edificios from './edificis.json';
-import BolaBingo from './objects/bolaBingo.jsx';
-import FotoBolaX from './objects/fotoBolaX.jsx';
-import Marco from './objects/marco.jsx';
-import Edificios from './objects/edificios.jsx';
-import MasMenos from './useState/MasMenos.jsx';
-import BolasInteractivas from './useState/bolasInteractivas.jsx';
-import Paginacion from './useState/Paginacion.jsx';
-import Tricolor from './useStateAdv/Tricolor.jsx';
-import Thumbs from './useStateAdv/Thumbs.jsx';
-import Fotos from './useStateAdv/Fotos.jsx';
+import Calculadora from './calculator/Calculadora.jsx';
 
 function MainContent(props) {
     const style = {
@@ -32,9 +11,8 @@ function MainContent(props) {
     }
 
     const elements = [
-        <Fotos />
-
-        ];
+        <Calculadora />
+    ];
 
     const content = [];
     for (let i = 0; i < elements.length; i++) {
