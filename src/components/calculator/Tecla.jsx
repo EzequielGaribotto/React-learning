@@ -3,9 +3,9 @@ function Tecla({ valor, pulsar }) {
   const isClear = valor === 'C';
   
   const style = {
-    width: '50px',
-    height: '50px',
-    margin: '5px',
+    width: '100%',
+    height: '45px',
+    margin: '2px',
     fontSize: '18px',
     borderRadius: '4px',
     cursor: 'pointer',

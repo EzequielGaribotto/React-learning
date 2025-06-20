@@ -17,7 +17,7 @@ function Calculadora() {
 
   const calcular = () => {
     if (valorAnterior === null) return;
-
+    
     const num1 = parseFloat(valorAnterior);
     const num2 = parseFloat(display);
     let resultado;
@@ -74,7 +74,7 @@ function Calculadora() {
   };
 
   const containerStyle = {
-    width: '230px',
+    width: '280px',
     padding: '15px',
     backgroundColor: '#f8f9fa',
     borderRadius: '8px',
@@ -85,35 +85,33 @@ function Calculadora() {
   const keypadStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '5px',
+    gap: '2px',
+    width: '100%',
   };
+
+  const keypadValues = [
+    ['7', '8', '9', '/'],
+    ['4', '5', '6', '*'],
+    ['1', '2', '3', '-'],
+    ['0', ',', '=', '+'],
+    ['C']
+  ];
 
   return (
     <div style={containerStyle}>
       <h3>Calculadora</h3>
       <Display contenido={display} />
       <div style={keypadStyle}>
-        <Tecla valor="7" pulsar={pulsar} />
-        <Tecla valor="8" pulsar={pulsar} />
-        <Tecla valor="9" pulsar={pulsar} />
-        <Tecla valor="/" pulsar={pulsar} />
-
-        <Tecla valor="4" pulsar={pulsar} />
-        <Tecla valor="5" pulsar={pulsar} />
-        <Tecla valor="6" pulsar={pulsar} />
-        <Tecla valor="*" pulsar={pulsar} />
-
-        <Tecla valor="1" pulsar={pulsar} />
-        <Tecla valor="2" pulsar={pulsar} />
-        <Tecla valor="3" pulsar={pulsar} />
-        <Tecla valor="-" pulsar={pulsar} />
-
-        <Tecla valor="0" pulsar={pulsar} />
-        <Tecla valor="," pulsar={pulsar} />
-        <Tecla valor="=" pulsar={pulsar} />
-        <Tecla valor="+" pulsar={pulsar} />
-
-        <Tecla valor="C" pulsar={pulsar} style={{gridColumn: 'span 4'}} />
+        {keypadValues.map((row, rowIndex) => 
+          row.map((valor, colIndex) => (
+            <Tecla 
+              key={`${rowIndex}-${colIndex}`} 
+              valor={valor} 
+              pulsar={pulsar} 
+              style={valor === 'C' ? {gridColumn: 'span 4'} : {}}
+            />
+          ))
+        )}
       </div>
     </div>
   );
